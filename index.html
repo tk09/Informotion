@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <link rel="stylesheet" href="js/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="behavior.js"></script>
+  </head>
+  <body>
+    <span id="arrow" class="arrowOut"><</span>
+    <form id="form">
+      <img src="img/logo.png" id="logo">
+      <label>straat</label><br>
+      <input type="text" id="straat" placeholder="default: eigen locatie"> <br>
+
+      <label>Hoeveelheid water (mm)</label><br>
+      <input type="number" id="water"><br> 
+
+      <label>Probleem</label><br>
+      <textarea type="text" id="probleem"></textarea><br>
+
+      <label>Urgentie</label><br>
+      <select id="urgentie">
+        <option value="1">laag</option>
+        <option value="2">gemiddeld</option>
+        <option value="3">hoog</option>
+      </select><br>
+
+      <input type="button" value="Plaats!" onclick="send()">
+
+      <input type="button" value="Verwijder" onclick="flush()">
+
+      <input type="button" value="Centreer map" onclick="initialize()"><br>
+
+    </form>
+    <span id="arrow2" class="arrowOut2"><</span>
+    <div id="legenda">
+        <h1>Legenda</h1>
+        <h2>Urgentie probleem</h2>
+        <img src="img/1.png"><p>Laag</p><br>
+        <img src="img/2.png"><p>Middel</p><br>
+        <img src="img/3.png"><p>Hoog</p>
+    </div>
+    <p id="list"></p>
+    <div id="map"></div>
+  </body>
+</html>
